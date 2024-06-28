@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerHome">
+   <top>
+            <AnchorPane prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: WHITE;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #032d40;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ImageView fitHeight="90.0" fitWidth="43.0" layoutX="33.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/stemma_repubblica_italiana-logo-963F7744E3-seeklogo.com.png" />
+                     </image>
+                  </ImageView>
+                  <HBox alignment="CENTER" layoutX="564.0" layoutY="26.0" prefHeight="54.0" prefWidth="272.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="26.0">
+                     <children>
+                        <Button fx:id="home" mnemonicParsing="false" onAction="#cambiaHome" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: WHITE; -fx-border-color: #032d40; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 3;" text="Home">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/home.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button mnemonicParsing="false" onAction="#cambiaContattaci" prefHeight="38.0" prefWidth="136.0" style="-fx-background-color: WHITE;" text="Contattaci">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8-phone-50.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </HBox>
+               </children>
+         <BorderPane.margin>
+            <Insets bottom="50.0" />
+         </BorderPane.margin>
+            </AnchorPane>
+         </top>
+   <center>
+      <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="50.0" prefWidth="860.0" style="-fx-background-color: #275576; -fx-background-radius: 2;" text="SISTEMA PASSAPORTI" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="hBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+               <children>
+                  <BorderPane fx:id="imagePane1" prefHeight="200.0" prefWidth="688.5">
+                     <bottom>
+                        <Button fx:id="cittadinibtn" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#loginCittadini" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #275576;" stylesheets="@application.css" text="Cittadini" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <BorderPane.margin>
+                              <Insets bottom="20.0" />
+                           </BorderPane.margin>
+                        </Button>
+                     </bottom>
+                     <center>
+                        <ImageView fx:id="myImage" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@images/37-sign-up.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+                  <Separator orientation="VERTICAL" prefHeight="300.0" />
+                  <BorderPane prefHeight="200.0" prefWidth="688.5">
+                     <bottom>
+                        <Button fx:id="questurabtn" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#loginQuestura" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #275576;" stylesheets="@application.css" text="Utenti Questura" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <BorderPane.margin>
+                              <Insets bottom="20.0" />
+                           </BorderPane.margin>
+                        </Button>
+                     </bottom>
+                     <center>
+                        <ImageView fx:id="myImage2" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                           <image>
+                              <Image url="@images/149.-Maintenance-in-Progress%20copia%202.png" />
+                           </image>
+                        </ImageView>
+                     </center>
+                  </BorderPane>
+               </children>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="50.0" right="50.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
